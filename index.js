@@ -9,10 +9,11 @@ app.use(bodyParse.urlencoded({ extended: false }));
 app.use(bodyParse.json());
 
 app.get("/", (req, res) => {
+  res.status(200).send({ message: "Hello World!" });
 
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World!");
+  // res.statusCode = 200;
+  // res.setHeader("Content-Type", "text/plain");
+  // res.end("Hello World!");
 });
 
 
